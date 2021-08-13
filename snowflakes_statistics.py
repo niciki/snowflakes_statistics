@@ -10,6 +10,8 @@ colors = ['SteelBlue', 'DodgerBlue', 'DeepSkyBlue', 'MediumBlue', 'CornflowerBlu
 snowflakes = []
 color = "light blue"
 counter = []
+tests = 3000
+number_of_snowflakes = 150
 
 T.Screen().setup(1300, 700)
 T.Screen().bgcolor("light blue")
@@ -146,7 +148,7 @@ def check(x_c, y_c, r):
     return True
 
 
-for i in range(150):
+for i in range(number_of_snowflakes):
     T.width(R.randrange(1, 3))
     x_c = R.uniform(-650, 650)
     y_c = R.uniform(-350, 350)
@@ -162,7 +164,7 @@ for i in range(150):
         else:
             drawing_3(x_c, y_c, r)
     cnt = 0
-    while not check(x_c, y_c, r) and cnt < 3000:
+    while not check(x_c, y_c, r) and cnt < tests:
         x_c = R.uniform(-650, 650)
         y_c = R.uniform(-350, 350)
         r = R.randrange(T.width() * 10 + 10, T.width() * 20 + 40)
