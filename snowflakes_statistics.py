@@ -146,7 +146,7 @@ def check(x_c, y_c, r):
     return True
 
 
-for i in range(300):
+for i in range(150):
     T.width(R.randrange(1, 3))
     x_c = R.uniform(-650, 650)
     y_c = R.uniform(-350, 350)
