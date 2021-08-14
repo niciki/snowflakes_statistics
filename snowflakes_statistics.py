@@ -170,7 +170,7 @@ for i in range(number_of_snowflakes):
         r = R.randrange(T.width() * 10 + 10, T.width() * 20 + 40)
         #r = R.randrange(4, T.width() * 20 + 40)
         cnt += 1
-    if cnt >= 3000:
+    if cnt >= tests:
         counter.append(cnt)
         R.shuffle(snowflakes)
         x, y, r = snowflakes[0]
